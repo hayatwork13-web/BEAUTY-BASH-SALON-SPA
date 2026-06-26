@@ -1,0 +1,155 @@
+/* Custom Styles for Beauty Bash Salon & Spa */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --color-bg-primary: #FFF8FB;
+  --color-bg-secondary: #FDEEF4;
+  --color-pink: #E56A98;
+  --color-rose-gold: #C88A9A;
+  --color-text: #2C2C2C;
+  --color-muted: #6F6F6F;
+  --color-card: #FFFFFF;
+  --color-border: #F2DCE5;
+  --gradient-luxury: linear-gradient(135deg, #E56A98 0%, #C88A9A 100%);
+  --gradient-luxury-hover: linear-gradient(135deg, #C88A9A 0%, #E56A98 100%);
+  --gradient-soft: linear-gradient(180deg, #FFF8FB 0%, #FDEEF4 100%);
+  --shadow-luxury: 0 20px 40px rgba(229, 106, 152, 0.08);
+  --shadow-luxury-hover: 0 30px 60px rgba(229, 106, 152, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rose-gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-pink);
+}
+
+/* Luxury animations and effects */
+.gradient-text {
+  background: var(--gradient-luxury);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-luxury-gradient {
+  background: var(--gradient-luxury);
+}
+
+.bg-luxury-gradient:hover {
+  background: var(--gradient-luxury-hover);
+}
+
+.border-luxury {
+  border-color: var(--color-border);
+}
+
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Shimmer/pulse animation for luxury shapes */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+.animate-float {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-slow 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Button glowing shadow */
+.btn-luxury {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(229, 106, 152, 0.25);
+}
+
+.btn-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(229, 106, 152, 0.4);
+}
+
+.btn-secondary-luxury {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary-luxury:hover {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-pink);
+  transform: translateY(-1px);
+}
+
+/* Smooth active service category indicator */
+.tab-active {
+  background-color: var(--color-pink);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(229, 106, 152, 0.2);
+}
+
+/* Custom interactive inputs */
+.form-input {
+  transition: all 0.3s ease;
+}
+.form-input:focus {
+  border-color: var(--color-pink);
+  box-shadow: 0 0 0 3px rgba(229, 106, 152, 0.1);
+  outline: none;
+}
+
+/* Dot decorations */
+.luxury-dots {
+  background-image: radial-gradient(var(--color-rose-gold) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}

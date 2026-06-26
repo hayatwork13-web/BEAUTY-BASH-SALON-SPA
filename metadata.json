@@ -1,0 +1,6 @@
+{
+  "name": "Beauty Bash Salon & Spa",
+  "description": "Premium luxury ladies salon and spa website for Beauty Bash Salon & Spa in Hyderabad, Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
